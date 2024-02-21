@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <table border="1" id="table" style="border:1px solid #000;"></table>
+
+    </table>
+
+    <script>
+      const URL = "https://cat-fact.herokuapp.com/facts";
+      const dataPara = document.querySelector("demo")
+
+    //   const getData = async () => {
+    //     let response = await fetch(URL);
+    //    let Data = await response.json();
+    //     //console.log(Data[1].text);
+    //     document.getElementById("demo").innerText = Data[2].text;
+    //   }
+    //   getData();
+
+    //  function getFact() {
+    //     fetch(URL).then((response) => {
+    //         return response.json();
+    //     })
+    //     .then((data) => {
+    //         console.log(data[2].text);
+    //         document.getElementById("demo").innerText = data[2].text;
+    //     })
+    //  }
+    //  getFact();
+
+
+    //  function getFact() {
+    //     fetch(URL).then((response) => {
+    //         return response.json();
+    //     })
+    //     .then((data) => {
+    //         newArr = data.map((ele) => {
+    //             return `<tr>
+    //                       <td>${ele.text}</td>
+    //                       <td>${ele.user}</td>
+    //                     </tr>`
+    //         });
+    //         var str = newArr.join(" ");
+    //         console.log(newArr[2].text);
+    //         document.querySelector("#table").innerHTML = str;
+    //     })
+    //  }
+
+
+        function getFact() {
+            fetch(URL).then((response) => {
+                return response.json();
+            })
+            .then((amit) => {
+                newArr = amit.map((value) => {
+                    return `<p><b>Common Value is:</b> ${value.text}</p>`
+                });
+                var str = newArr.join(" ");
+                document.querySelector("#demo").innerHTML = str;
+            });
+        }
+     getFact();
+      
+    </script>
+</body>
+</html>

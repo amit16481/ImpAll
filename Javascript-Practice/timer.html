@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="demo">1asd0</div>
+   <!-- <p><a href="javascript:void(0)" id="resend" onclick="mainTimer()">Resend OTP </a></p> -->
+   <button id="resend" onclick="mainTimer()">Resend OTP</button>
+    <script>
+        function mainTimer() {
+            let timerLeft = 10;
+            let demo = document.getElementById("demo");
+            let resend = document.getElementById("resend");
+            let timerID = setInterval(frame, 500);
+            function frame() {
+                if(timerLeft == -1){
+                clearInterval(timerID);
+                resend.removeAttribute("disabled");
+                }else {
+                demo.innerHTML = timerLeft;
+                timerLeft--;
+                resend.setAttribute("disabled", true);
+                }
+            }
+        }
+        mainTimer();
+    </script>
+</body>
+</html>

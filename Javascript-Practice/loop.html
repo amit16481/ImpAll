@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <ul id="test">asdf</ul>
+
+    <script>
+        var secondArr = [10, 20, 30, 40, 50];
+        var arr = [
+            {
+                name: "Heater",
+                price: 1000,
+                color: "White",
+                brand: "Wonder"
+            },
+            {
+                name: "Heater2",
+                price: 2000,
+                color: "Green",
+                brand: "WonderNew"
+            },
+            {
+                name: "Heater3",
+                price: 3000,
+                color: "Yellow",
+                brand: "Wondermen"
+            }
+        ];
+
+        ////// Map function start here ////////
+        // var newArr = arr.map(function(value) {
+        //     value.price++;
+        //     console.log(value.price);
+        //    return value.name
+        // });
+        // console.log(newArr[0]);
+
+        // var secNewArr = secondArr.map(function(val){
+        //     console.log(val);
+        // });
+        ////// Map function end here ////////
+
+        ////// ForEach function start here ////////
+        // secondArr.forEach(function(val){
+        //         console.log(`Index value is ${val*4}.`) 
+        //     });
+
+        // arr.forEach(function(value) {
+        //     value.price++;
+        //     //console.log(value.price);
+        //    return value
+        // });
+       
+        // console.log(arr[1]);
+        ////// ForEach function end here ////////
+
+        // let str = "";
+        // for(let i=1; i<5; i++){
+            
+        //     str += "<li>" + " Amit " + i + "</li>";
+        //    console.log("Amit" + i)
+           
+        // }
+        // let str =""
+        // let test = document.getElementById("test");
+        // for(let r = 1; r<=5; r++) {
+            
+        //     str += r + "<br />";
+        //     setTimeout(function(){
+        //     console.log("Cheking" + r);
+        // },2000);
+        // }
+        // test.innerHTML = str;
+        // let str = "";
+        // for (let i = 1; i < 5; i++) {
+        // str += i +" "+ cars[i] + "<br>";
+        // }
+
+        // document.getElementById("test").innerHTML = str;
+            var timerLeft = "10";
+            let test = document.getElementById("test");
+            // let timerID = setInterval(() => {
+            //     if(timerLeft == 0) {
+            //         clearTimeout(timerID);
+            //     }
+            //     test.innerHTML = timerLeft--;
+            // }, 500);
+
+
+            // function timer() {
+            //     if(timerLeft == -1) {
+            //       clearTimeout(timerID);
+            //     } else {
+            //         test.innerHTML = timerLeft--;
+            //     }
+            // }
+        
+
+    </script>
+
+    
+
+    <!-- <span style="color: #ff0000 !important; display: block; width: 100%; margin: 10px 0;"></span> -->
+</body>
+</html>

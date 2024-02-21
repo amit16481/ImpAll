@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div id="demos">
+        <ul id="demo">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Locations</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    
+    <script>
+        demo = document.getElementById("demo")
+        items = document.querySelectorAll("li");//Get items
+        items.forEach(function(item, index, arr) {
+        console.log(index + " "+ item.firstChild.data + " " + " finally");/*Use variable item for any need*/
+        let display = item + " finally" + " "  + index + " " +arr;
+        
+        });
+    </script>
+</body>
+</html>
